@@ -290,7 +290,7 @@
 
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm">
+                    <form id="contactForm" action="https://formsubmit.co/lucy.madec@gmail.com" method="POST">
                         <div class="form-group">
                             <input type="text" id="name" name="name" placeholder="Votre nom" required>
                         </div>
@@ -303,6 +303,9 @@
                         <div class="form-group">
                             <textarea id="message" name="message" placeholder="Votre message" required></textarea>
                         </div>
+                        <input type="hidden" name="_next" value="https://lucymadec.com/merci.html">
+                        <input type="hidden" name="_subject" value="Nouveau message depuis votre portfolio">
+                        <input type="hidden" name="_template" value="table">
                         <button type="submit" class="btn btn-primary">Envoyer</button>
                     </form>
                 </div>
