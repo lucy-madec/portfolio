@@ -1,5 +1,6 @@
 /* Variables */
 :root {
+    /* Thème clair (par défaut) */
     --primary-color: #4a6bff;
     --secondary-color: #6c757d;
     --dark-color: #212529;
@@ -8,6 +9,39 @@
     --danger-color: #dc3545;
     --font-primary: 'Poppins', sans-serif;
     --transition: all 0.3s ease;
+    
+    /* Couleurs de base pour le thème clair */
+    --bg-color: #ffffff;
+    --bg-color-rgb: 255, 255, 255;
+    --bg-secondary: #f9f9f9;
+    --text-color: #212529;
+    --text-secondary: #6c757d;
+    --border-color: #e1e1e1;
+    --card-bg: #ffffff;
+    --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    --header-bg: rgba(255, 255, 255, 0.95);
+    --footer-bg: #212529;
+    --footer-text: #ffffff;
+}
+
+/* Thème sombre */
+[data-theme="dark"] {
+    --primary-color: #6c8fff;
+    --secondary-color: #a0a9b1;
+    --dark-color: #e9ecef;
+    --light-color: #343a40;
+    
+    --bg-color: #121212;
+    --bg-color-rgb: 18, 18, 18;
+    --bg-secondary: #1e1e1e;
+    --text-color: #e9ecef;
+    --text-secondary: #a0a9b1;
+    --border-color: #2d2d2d;
+    --card-bg: #1e1e1e;
+    --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --header-bg: rgba(18, 18, 18, 0.95);
+    --footer-bg: #0a0a0a;
+    --footer-text: #e9ecef;
 }
 
 /* Reset & Base Styles */
@@ -24,14 +58,15 @@ html {
 body {
     font-family: var(--font-primary);
     line-height: 1.6;
-    color: var(--dark-color);
-    background-color: #fff;
+    color: var(--text-color);
+    background-color: var(--bg-color);
     overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
     text-decoration: none;
-    color: var(--dark-color);
+    color: var(--text-color);
     transition: var(--transition);
 }
 
@@ -116,14 +151,15 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--header-bg);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
 }
 
 header.scrolled {
     padding: 15px 0;
-    background: rgba(255, 255, 255, 0.98);
+    background: var(--header-bg);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 nav {
@@ -180,7 +216,7 @@ nav {
 .burger div {
     width: 25px;
     height: 3px;
-    background-color: var(--dark-color);
+    background-color: var(--text-color);
     margin: 5px;
     transition: var(--transition);
 }
@@ -190,11 +226,17 @@ nav {
     height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%), url('../img/hero-bg.jpg');
+    background: linear-gradient(135deg, rgba(var(--bg-color-rgb), 0.9) 0%, rgba(var(--bg-color-rgb), 0.7) 100%), url('../img/hero-bg.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
     padding-top: 80px;
+}
+
+[data-theme="dark"] .hero {
+    background: linear-gradient(135deg, rgba(18, 18, 18, 0.9) 0%, rgba(18, 18, 18, 0.8) 100%), url('../img/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .hero-content {
@@ -214,13 +256,13 @@ nav {
 .hero-content h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: var(--secondary-color);
+    color: var(--text-secondary);
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 30px;
-    color: var(--secondary-color);
+    color: var(--text-secondary);
 }
 
 .hero-buttons {
@@ -239,7 +281,7 @@ nav {
     height: 40px;
     border-radius: 50%;
     background: var(--light-color);
-    color: var(--dark-color);
+    color: var(--text-color);
     margin-right: 10px;
     transition: var(--transition);
 }
@@ -285,7 +327,7 @@ nav {
 
 .about-text p {
     margin-bottom: 20px;
-    color: var(--secondary-color);
+    color: var(--text-secondary);
 }
 
 .personal-info {
@@ -322,16 +364,16 @@ nav {
 }
 
 .skill-item {
-    background: #fff;
+    background: var(--card-bg);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--card-shadow);
     transition: var(--transition);
 }
 
 .skill-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .skill-icon {
@@ -346,7 +388,7 @@ nav {
 
 .skill-bar {
     height: 8px;
-    background: #f1f1f1;
+    background: var(--border-color);
     border-radius: 10px;
     overflow: hidden;
 }
@@ -390,14 +432,14 @@ nav {
 .portfolio-item {
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--card-shadow);
     transition: var(--transition);
     position: relative;
 }
 
 .portfolio-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 .portfolio-img {
@@ -415,7 +457,7 @@ nav {
 
 .portfolio-info {
     padding: 20px;
-    background: #fff;
+    background: var(--card-bg);
 }
 
 .portfolio-info h3 {
@@ -423,7 +465,7 @@ nav {
 }
 
 .portfolio-info p {
-    color: var(--secondary-color);
+    color: var(--text-secondary);
     margin-bottom: 15px;
 }
 
@@ -451,7 +493,7 @@ nav {
 
 /* Contact Section */
 .contact {
-    background: #f9f9f9;
+    background: var(--bg-secondary);
 }
 
 .contact-content {
@@ -483,7 +525,7 @@ nav {
 }
 
 .contact-text p {
-    color: var(--secondary-color);
+    color: var(--text-secondary);
 }
 
 .form-group {
@@ -493,10 +535,12 @@ nav {
 .form-group input, .form-group textarea {
     width: 100%;
     padding: 15px;
-    border: 1px solid #e1e1e1;
+    border: 1px solid var(--border-color);
     border-radius: 5px;
     font-family: var(--font-primary);
     font-size: 1rem;
+    background-color: var(--card-bg);
+    color: var(--text-color);
     transition: var(--transition);
 }
 
@@ -513,8 +557,8 @@ nav {
 
 /* Footer */
 footer {
-    background: var(--dark-color);
-    color: #fff;
+    background: var(--footer-bg);
+    color: var(--footer-text);
     padding: 70px 0 20px;
 }
 
@@ -581,6 +625,33 @@ footer {
     color: rgba(255, 255, 255, 0.7);
 }
 
+/* Theme Toggle */
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+.theme-toggle i {
+    font-size: 1.5rem;
+}
+
 /* Responsive Design */
 @media screen and (max-width: 992px) {
     .about-content, .contact-content {
@@ -601,7 +672,7 @@ footer {
         position: absolute;
         right: 0;
         top: 80px;
-        background: #fff;
+        background: var(--card-bg);
         height: calc(100vh - 80px);
         width: 70%;
         flex-direction: column;

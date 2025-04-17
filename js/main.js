@@ -122,6 +122,48 @@ if (contactForm) {
     });
 }
 
+// Theme Toggle Functionality
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = document.getElementById('themeIcon');
+const htmlElement = document.documentElement;
+
+// Check for saved theme preference or use default
+const getCurrentTheme = () => {
+    return localStorage.getItem('theme') || 'light';
+};
+
+// Apply the current theme on page load
+const applyTheme = (theme) => {
+    htmlElement.setAttribute('data-theme', theme);
+    
+    // Update the theme toggle icon
+    if (theme === 'dark') {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+    } else {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+    }
+    
+    // Save theme preference
+    localStorage.setItem('theme', theme);
+};
+
+// Toggle between light and dark themes
+const toggleTheme = () => {
+    const currentTheme = getCurrentTheme();
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    applyTheme(newTheme);
+};
+
+// Apply saved theme on page load
+applyTheme(getCurrentTheme());
+
+// Add click event to theme toggle button
+if (themeToggle) {
+    themeToggle.addEventListener('click', toggleTheme);
+}
+
 // Animation on scroll
 window.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section');
