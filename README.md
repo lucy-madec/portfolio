@@ -1,4 +1,4 @@
-# Portfolio de Lucy Madec
+# Portfolio de Lucy MADEC
 
 Un portfolio professionnel moderne pour présenter mes compétences, projets et informations de contact.
 
