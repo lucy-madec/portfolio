@@ -18,9 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
             formStatus.innerHTML = '<p class="sending">Envoi en cours...</p>';
             submitBtn.disabled = true;
             
-            // Paramètres pour EmailJS
+            // Paramètres pour EmailJS - utilisons exactement les noms du template actuel
             const templateParams = {
-                // Ces noms correspondent aux variables standard d'EmailJS
                 from_name: document.getElementById('name').value,
                 reply_to: document.getElementById('email').value,
                 subject: document.getElementById('subject').value,
@@ -29,6 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Afficher les valeurs dans la console pour déboguer
             console.log('Valeurs envoyées :', templateParams);
+            
+            // Afficher un message de débogage dans l'interface
+            formStatus.innerHTML += '<p>Débogage : ' + JSON.stringify(templateParams) + '</p>';
             
             // Envoi de l'email via EmailJS
             emailjs.send('service_z5w785v', 'template_dghkqld', templateParams)
