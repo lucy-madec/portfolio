@@ -18,7 +18,7 @@
     --text-secondary: #6c757d;
     --border-color: #e1e1e1;
     --card-bg: #ffffff;
-    --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    --card-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     --header-bg: rgba(255, 255, 255, 0.95);
     --footer-bg: #212529;
     --footer-text: #ffffff;
@@ -466,7 +466,7 @@ nav {
 
 .portfolio-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .portfolio-img {
