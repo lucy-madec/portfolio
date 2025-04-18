@@ -12,7 +12,8 @@ const projects = [
   { name: 'app-favorites', url: 'http://localhost/app-favorites/' },
   { name: 'pixelplush', url: 'https://pixelplush.shop/' },
   { name: 'clicker', url: 'http://localhost/clicker/' },
-  { name: 'memory', url: 'http://localhost/memory/' }
+  { name: 'memory', url: 'http://localhost/memory/' },
+  { name: 'cinetech', url: 'http://localhost/cinetech/' }
 ];
 
 // Dossier de destination pour les captures d'écran
