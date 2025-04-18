@@ -26,11 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 message: document.getElementById('message').value
             };
             
-            // Afficher les valeurs dans la console pour déboguer
-            console.log('Valeurs envoyées :', templateParams);
-            
-            // Afficher un message de débogage dans l'interface
-            formStatus.innerHTML += '<p>Débogage : ' + JSON.stringify(templateParams) + '</p>';
+            // Log discret dans la console
+            console.log('Envoi du formulaire');
             
             // Envoi de l'email via EmailJS
             emailjs.send('service_z5w785v', 'template_dghkqld', templateParams)
