@@ -20,12 +20,15 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Paramètres pour EmailJS
             const templateParams = {
-                // Ces noms doivent correspondre exactement à ceux utilisés dans votre template EmailJS
-                user_name: document.getElementById('name').value,
-                user_email: document.getElementById('email').value,
+                // Ces noms correspondent aux variables standard d'EmailJS
+                from_name: document.getElementById('name').value,
+                reply_to: document.getElementById('email').value,
                 subject: document.getElementById('subject').value,
                 message: document.getElementById('message').value
             };
+            
+            // Afficher les valeurs dans la console pour déboguer
+            console.log('Valeurs envoyées :', templateParams);
             
             // Envoi de l'email via EmailJS
             emailjs.send('service_z5w785v', 'template_dghkqld', templateParams)
