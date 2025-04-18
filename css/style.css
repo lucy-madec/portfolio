@@ -519,6 +519,43 @@ nav {
     width: 100%;
 }
 
+/* Styles pour les icônes de langages */
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.tech-icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.tech-icon:hover {
+    transform: translateY(-5px);
+}
+
+/* Couleurs des icônes */
+.html5-icon { color: #E34F26; }
+.css3-icon { color: #1572B6; }
+.js-icon { color: #F7DF1E; }
+.php-icon { color: #777BB4; }
+.mysql-icon { color: #4479A1; }
+.react-icon { color: #61DAFB; }
+.node-icon { color: #339933; }
+.symfony-icon { color: #000000; }
+.bootstrap-icon { color: #7952B3; }
+.sass-icon { color: #CC6699; }
+.wordpress-icon { color: #21759B; }
+.jquery-icon { color: #0769AD; }
+.git-icon { color: #F05032; }
+.docker-icon { color: #2496ED; }
+.python-icon { color: #3776AB; }
+.vue-icon { color: #4FC08D; }
+.angular-icon { color: #DD0031; }
+.ts-icon { color: #3178C6; }
+
 /* Contact Section */
 .contact {
     background: var(--bg-secondary);
