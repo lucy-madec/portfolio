@@ -462,6 +462,7 @@ nav {
     box-shadow: var(--card-shadow);
     transition: var(--transition);
     position: relative;
+    background: var(--card-bg);
 }
 
 .portfolio-item:hover {
