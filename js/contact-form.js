@@ -1,7 +1,7 @@
 // Initialisation d'EmailJS
 (function() {
     // Remplacez ces valeurs par vos propres identifiants EmailJS
-    emailjs.init("VOTRE_CLE_PUBLIQUE");
+    emailjs.init("hlaXtOmt8aOqvooqo");
 })();
 
 // Gestion du formulaire de contact
@@ -27,8 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
             };
             
             // Envoi de l'email via EmailJS
-            // Remplacez ces valeurs par vos propres identifiants EmailJS
-            emailjs.send('SERVICE_ID', 'TEMPLATE_ID', templateParams)
+            emailjs.send('service_z5w785v', 'template_dghkqld', templateParams)
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
                     formStatus.innerHTML = '<p class="success">Message envoyé avec succès !</p>';
