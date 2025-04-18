@@ -529,6 +529,65 @@ nav {
     gap: 50px;
 }
 
+.contact-centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-email-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.contact-icon-large {
+    width: 100px;
+    height: 100px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.email-link {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 15px 0 30px;
+    transition: var(--transition);
+}
+
+.email-link:hover {
+    opacity: 0.8;
+}
+
+.contact-social {
+    margin-top: 20px;
+}
+
+.contact-social a {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+
+.contact-location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
 .contact-item {
     display: flex;
     margin-bottom: 30px;

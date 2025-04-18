@@ -268,48 +268,28 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Me contacter</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>Localisation</h3>
-                            <p>Marseille, France</p>
-                        </div>
+            <div class="contact-content contact-centered">
+                <div class="contact-email-main">
+                    <div class="contact-icon-large">
+                        <i class="fas fa-envelope"></i>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>Email</h3>
-                            <p>lucy.madec@gmail.com</p>
-                        </div>
+                    <h3>Contactez-moi par email</h3>
+                    <a href="mailto:lucy.madec@gmail.com" class="email-link">lucy.madec@gmail.com</a>
+                    
+                    <div class="social-icons contact-social">
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
                     </div>
-
                 </div>
-                <div class="contact-form">
-                    <form id="contactForm" action="https://formsubmit.co/lucy.madec@gmail.com" method="POST">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Votre nom" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Votre email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Sujet" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Votre message" required></textarea>
-                        </div>
-                        <!-- Champs cachés pour FormSubmit -->
-                        <input type="hidden" name="_next" value="http://localhost/portfolio/merci.html">
-                        <input type="hidden" name="_subject" value="Nouveau message depuis votre portfolio">
-                        <input type="hidden" name="_template" value="table">
-                        <button type="submit" class="btn btn-primary">Envoyer</button>
-                    </form>
+                
+                <div class="contact-location">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>Localisation</h3>
+                        <p>Marseille, France</p>
+                    </div>
                 </div>
             </div>
         </div>
