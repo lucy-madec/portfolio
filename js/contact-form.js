@@ -20,9 +20,9 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Paramètres pour EmailJS
             const templateParams = {
-                // Assurez-vous que ces noms correspondent exactement à ceux utilisés dans votre template EmailJS
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
+                // Ces noms doivent correspondre exactement à ceux utilisés dans votre template EmailJS
+                user_name: document.getElementById('name').value,
+                user_email: document.getElementById('email').value,
                 subject: document.getElementById('subject').value,
                 message: document.getElementById('message').value
             };
